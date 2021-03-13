@@ -1,0 +1,36 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from abc import ABC, abstractmethod
+
+
+    class Account(ABC):
+        def __init__(self, starting_sum, interest=None):
+            self.sum = starting_sum
+            self.interest = interest
+
+        @abstractmethod
+        def add_money(self, amount):
+            ...
+
+        def add_interest(self):
+            ...
+
+
+    # create SavingsAccount and Deposit
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10117#comment
+status: Failed
+feedback:
+  message: |
+    Failed test #1 of 3. Runtime error
+
+    Error:
+    Traceback (most recent call last):
+      File "jailed_code", line 76, in <module>
+        _new_savings.add_interest()
+    TypeError: add_interest() missing 1 required positional argument: 'interest'
+  time: Tue, 09 Mar 2021 01:55:04 UTC
+record: -1
